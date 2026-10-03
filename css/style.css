@@ -1,0 +1,83 @@
+/* ===== VARIABEL WARNA (ubah di sini untuk ganti tema) ===== */
+:root{--navy:#0b2a5b;--accent:#5fb7f5;--soft:#eaf5fe;--text:#1d2b44;--muted:#6b7a90;--bg:#fff;--bg-alt:#f5f9fd;--card:#fff;--shadow:0 8px 30px rgba(11,42,91,.08)}
+[data-bs-theme=dark]{--navy:#7cc4f8;--accent:#5fb7f5;--soft:#12233f;--text:#e6eefa;--muted:#9bb0cc;--bg:#0b1424;--bg-alt:#0f1b30;--card:#13223c;--shadow:0 8px 30px rgba(0,0,0,.35)}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--bg);padding-top:70px}
+h1,h2,h3,h4,h5,h6{color:var(--navy);font-weight:700}
+h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.muted{color:var(--muted)}
+.section{padding:clamp(3rem,7vw,5.5rem) 0}.alt{background:var(--bg-alt)}
+
+/* Navbar */
+.navbar{background:transparent;transition:.3s;padding:.9rem 0}
+.navbar.scrolled{background:var(--card);box-shadow:var(--shadow);padding:.5rem 0}
+.navbar-brand{font-weight:800;color:var(--navy)!important;display:flex;align-items:center;gap:.6rem}
+/* Ukuran logo: ubah height jika logo terlalu besar/kecil */
+.brand-logo{height:38px;width:auto}
+.nav-link{color:var(--text)!important;font-weight:500;padding:.6rem .9rem!important}
+.nav-link:hover,.nav-link.active{color:var(--accent)!important}
+.navbar-toggler{border:0;color:var(--navy)}.navbar-toggler:focus{box-shadow:none}
+@media(max-width:991px){.navbar-collapse{background:var(--card);border-radius:16px;padding:1rem;margin-top:.5rem;box-shadow:var(--shadow)}}
+.theme-btn{border:1px solid var(--accent);color:var(--navy);border-radius:50%;width:38px;height:38px}
+
+/* Tombol */
+.btn-main{background:var(--navy);color:#fff;border-radius:50px;padding:.6rem 1.5rem;font-weight:600;border:2px solid var(--navy)}
+[data-bs-theme=dark] .btn-main{color:#0b1424}
+.btn-main:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+.btn-outline-main{border:2px solid var(--navy);color:var(--navy);border-radius:50px;padding:.6rem 1.5rem;font-weight:600}
+.btn-outline-main:hover{background:var(--navy);color:#fff}
+
+/* Hero */
+.hero{padding:clamp(2.5rem,6vw,5rem) 0;background:linear-gradient(135deg,var(--soft),var(--bg))}
+.badge-soft{background:var(--soft);color:var(--navy);padding:.4rem 1rem;border-radius:50px;font-weight:600;font-size:.85rem;border:1px solid var(--accent)}
+.hero-visual{position:relative;background:linear-gradient(135deg,var(--navy),var(--accent));border-radius:32px;aspect-ratio:1/.85;display:flex;align-items:center;justify-content:center;font-size:clamp(6rem,15vw,10rem);color:#fff;box-shadow:var(--shadow)}
+.float-chip{position:absolute;background:var(--card);color:var(--navy);padding:.6rem 1rem;border-radius:14px;font-size:.85rem;font-weight:600;box-shadow:var(--shadow);animation:float 4s ease-in-out infinite}
+.c1{top:10%;left:-4%}.c2{bottom:10%;right:-4%;animation-delay:1.5s}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* Card */
+.card-soft{background:var(--card);border-radius:20px;padding:1.75rem;box-shadow:var(--shadow);transition:.3s;border:1px solid rgba(95,183,245,.15)}
+.card-soft:hover{transform:translateY(-6px)}
+.icon-lg{font-size:2.2rem;color:var(--accent);display:block;margin-bottom:.75rem}
+.svc-head{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.svc-icon{width:56px;height:56px;border-radius:16px;background:var(--soft);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.time-badge{display:inline-block;background:var(--navy);color:#fff;border-radius:50px;padding:.25rem .8rem;font-size:.8rem;font-weight:600}
+[data-bs-theme=dark] .time-badge{color:#0b1424}
+.price-list{list-style:none;padding:0;margin:1rem 0 0}
+.price-list li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed rgba(107,122,144,.3);font-size:.95rem}
+.price-list li:last-child{border:0}.price-list b{color:var(--navy);white-space:nowrap}
+.tag-kilat .svc-icon{background:var(--navy);color:#fff}
+[data-bs-theme=dark] .tag-kilat .svc-icon{color:#0b1424}
+
+/* Filter */
+.filter-bar{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.btn-filter{border:1px solid var(--accent);color:var(--navy);border-radius:50px;padding:.5rem 1.3rem;font-weight:600}
+.btn-filter.active,.btn-filter:hover{background:var(--navy);color:#fff}
+[data-bs-theme=dark] .btn-filter.active{color:#0b1424}
+.service-item.hide{display:none}
+
+/* Header halaman, CTA, lain-lain */
+.page-head{padding:3.5rem 0;text-align:center;background:linear-gradient(135deg,var(--soft),var(--bg))}
+.page-head p{color:var(--muted);margin:0}
+.cta{background:linear-gradient(135deg,var(--navy),#1c5aa8);color:#fff;border-radius:28px;padding:clamp(2rem,6vw,4rem);text-align:center}
+.cta h2{color:#fff}
+[data-bs-theme=dark] .cta{background:linear-gradient(135deg,#12335f,#1c5aa8)}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1rem 1.25rem;border-radius:12px}
+.stat{font-size:2rem;font-weight:800;color:var(--navy)}
+.map-box{height:100%;min-height:320px;border-radius:20px;border:2px dashed var(--accent);background:var(--soft);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);text-align:center;font-size:1.1rem}
+.map-box i{font-size:3rem;color:var(--accent)}
+.footer{background:#08193a;color:#b8c7de;padding:3rem 0 1.5rem}
+.footer a{color:#b8c7de;text-decoration:none;line-height:2}.footer a:hover{color:var(--accent)}
+.footer hr{border-color:rgba(255,255,255,.15)}
+#backTop{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;border:0;background:var(--navy);color:#fff;opacity:0;visibility:hidden;transition:.3s;z-index:99;box-shadow:var(--shadow)}
+[data-bs-theme=dark] #backTop{color:#0b1424}
+#backTop.show{opacity:1;visibility:visible}
+
+/* Animasi muncul: hanya aktif jika JavaScript berjalan (class "js" ditambahkan oleh script.js) */
+.js .reveal{opacity:0;transform:translateY(24px);transition:.7s}
+.js .reveal.visible{opacity:1;transform:none}
+@media(max-width:576px){.float-chip{display:none}.btn-lg{width:100%}}
+
+/* Video di hero: mengisi penuh kotak, chip tetap di atas video */
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:32px}
+.float-chip{z-index:2}
